@@ -1,0 +1,93 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(early(addPluginSbtFile="""C:\Users\Kuba\AppData\Local\Temp\idea.sbt"""), None, None)
+[debug] > Exec(addPluginSbtFile="""C:\Users\Kuba\AppData\Local\Temp\idea.sbt""", None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.9.7 (Amazon.com Inc. Java 17.0.9)
+[debug]       Load.loadUnit: plugins took 136.6954ms
+[debug]       Load.loadUnit: defsScala took 1.5828ms
+[debug] [Loading] Scanning directory C:\Users\Kuba\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Kuba\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 40.8967 ms
+[debug]           Load.resolveProject(global-plugins) took 86.189ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\Kuba\.sbt\1.0\plugins, plugins: List(<none>))) took 158.9692ms
+[debug] [Loading] Done in C:\Users\Kuba\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 221.349ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.603ms
+[debug]     Load.loadUnit(file:/C:/Users/Kuba/.sbt/1.0/plugins/, ...) took 381.0639ms
+[debug]   Load.apply: load took 684.0495ms
+[debug]   Load.apply: resolveProjects took 8.3541ms
+[debug]   Load.apply: finalTransforms took 98.4714ms
+[debug]   Load.apply: config.delegates took 21.2897ms
+[debug]   Load.apply: Def.make(settings)... took 789.4296ms
+[debug]   Load.apply: structureIndex took 191.7741ms
+[debug]   Load.apply: mkStreams took 2.9165ms
+[info] loading global plugins from C:\Users\Kuba\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 4020.6694ms
+[debug]           Load.loadUnit: plugins took 37.5669ms
+[debug]           Load.loadUnit: defsScala took 0.005ms
+[debug] [Loading] Scanning directory C:\Users\Kuba\Desktop\Ecom\backend\services\InventoryService\project
+[debug]             Load.loadUnit: mkEval took 5.9421ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Kuba\Desktop\Ecom\backend\services\InventoryService\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.6258 ms
+[info] loading settings for project inventoryservice-build from idea.sbt ...
+[debug]               Load.resolveProject(inventoryservice-build) took 5.8443ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id inventoryservice-build, base: C:\Users\Kuba\Desktop\Ecom\backend\services\InventoryService\project, plugins: List(<none>))) took 9.2276ms
+[debug] [Loading] Done in C:\Users\Kuba\Desktop\Ecom\backend\services\InventoryService\project, returning: (inventoryservice-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 205.4258ms
+[debug]           Load.loadUnit: cleanEvalClasses took 12.059ms
+[debug]         Load.loadUnit(file:/C:/Users/Kuba/Desktop/Ecom/backend/services/InventoryService/project/, ...) took 256.5959ms
+[debug]       Load.apply: load took 258.9808ms
+[debug]       Load.apply: resolveProjects took 0.1747ms
+[debug]       Load.apply: finalTransforms took 13.385ms
+[debug]       Load.apply: config.delegates took 0.533ms
+[debug]       Load.apply: Def.make(settings)... took 185.9464ms
+[debug]       Load.apply: structureIndex took 92.9793ms
+[debug]       Load.apply: mkStreams took 0.0034ms
+[info] loading project definition from C:\Users\Kuba\Desktop\Ecom\backend\services\InventoryService\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[debug]     Load.loadUnit: plugins took 2951.0596ms
+[debug]     Load.loadUnit: defsScala took 0.0151ms
+[debug] [Loading] Scanning directory C:\Users\Kuba\Desktop\Ecom\backend\services\InventoryService
+[debug]       Load.loadUnit: mkEval took 1.96ms
+[error] Type error in expression
+[debug] > Exec(loadFailed, None, None)
+[warn] Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? (default: r)
