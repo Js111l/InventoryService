@@ -3,10 +3,11 @@ package service
 import akka.http.scaladsl.marshalling.ToResponseMarshallable
 import db.ProductRepository
 import entity.ProductEntity
-
+import com.google.inject.Inject
+import com.google.inject.Singleton
 import scala.concurrent.Future
-
-class InventoryService(productRepository: ProductRepository) {
+@Singleton
+class InventoryService @Inject()(productRepository: ProductRepository) {
 
   def getAllProducts(): Future[List[ProductEntity]] = {
     this.productRepository.findAll()

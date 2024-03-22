@@ -19,5 +19,6 @@ libraryDependencies ++= Seq(
   "com.typesafe.slick" %% "slick-hikaricp" % "3.4.1",
   "com.typesafe.slick" %% "slick" % "3.4.1",
   "org.slf4j" % "slf4j-nop" % "2.0.5",
-  "ch.qos.logback" % "logback-classic" % "1.4.7"
+  "ch.qos.logback" % "logback-classic" % "1.4.7",
+  "net.codingwell" %% "scala-guice" % "7.0.0"
 )

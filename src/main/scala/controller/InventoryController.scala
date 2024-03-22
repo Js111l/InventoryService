@@ -9,32 +9,29 @@ import akka.http.scaladsl.server.Directives._
 import scala.util.{Failure, Success}
 import conf.json.MyJsonProtocol._
 import spray.json._
+import com.google.inject.Inject
+import com.google.inject.Singleton
 
-class InventoryController(inventoryService: InventoryService) {
+@Singleton
+class InventoryController @Inject()( inventoryService: InventoryService) {
   implicit val jsonFormat: RootJsonFormat[model.Product] = jsonFormat3(model.Product.apply)
   implicit val system: ActorSystem = ActorSystem("inventory-system")
-  //implicit val materializer: ActorMaterializer = ActorMaterializer()
 
   val routes: Route = pathPrefix("api" / "inventory") {
-    path("products/active") {
+    path("/products/active") {
       Directives.get {
         onComplete(inventoryService.getActiveProducts()) {
           case Success(products) => complete(StatusCodes.OK, products.toJson.toString())
           case Failure(ex) => complete(ApiErrorHandler.getHttpEntity(ex))
         }
       }
-    } //~
-    //      path("products/active") {
-    //        Directives.get {
-    //          complete(inventoryService.getActiveProducts())
-    //        }
-    //      } ~ parameters("id".as[Int]) { id =>
-    //      path("products") {
-    //        get {
-    //          complete("inventoryService.getProductStock(id)")
-    //        }
-    //      }
-    //    } ~ path("products") {
+    } ~ path("products" / IntNumber) { id =>
+      get {
+        complete(this.inventoryService.getProductStock(id))
+      }
+    }
+
+    //    ~ path("products") {
     //      get {
     //        onComplete(inventoryService.getAllProducts()) {
     //          case Success(products) => complete(StatusCodes.OK, products.toJson.toString())
@@ -68,10 +65,10 @@ class InventoryController(inventoryService: InventoryService) {
     //        Directives.get {
     //          complete(inventoryService.getTopSellingProducts())
     //        }
-    //      } ~ path("products/category") {
-    //        Directives.get {
-    //          complete(inventoryService.getProductsByCategory())
-    //        }
+          } ~ path("products/category") {
+            Directives.get {
+              complete(inventoryService.getProductsByCategory())
+            }
     //      }
 
 
@@ -99,7 +96,6 @@ class InventoryController(inventoryService: InventoryService) {
     //            complete(inventoryService.unsubscribeFromStockAlert(productId))
     //          }
     //      }
-
 
 
   }
