@@ -11,9 +11,7 @@ import tasks.TaskScheduler
 import scala.concurrent.ExecutionContextExecutor
 
 object Main extends App {
-  // Create ActorSystem and Materializer
   implicit val system: ActorSystem = ActorSystem("main")
-  implicit val materializer: ActorMaterializer = ActorMaterializer()
   implicit val executionContext: ExecutionContextExecutor = system.dispatcher
 
   val injector = Guice.createInjector(new MainModule())
@@ -24,6 +22,5 @@ object Main extends App {
   val taskScheduler = injector.getInstance(classOf[TaskScheduler])
   taskScheduler.startScheduler(system)
 
-  // Start the server by providing the ActorSystem
   Http().newServerAt("localhost", 9090).bind(routes)
 }

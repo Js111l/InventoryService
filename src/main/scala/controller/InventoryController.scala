@@ -16,8 +16,8 @@ import com.google.inject.Singleton
 class InventoryController @Inject()( inventoryService: InventoryService) {
   implicit val jsonFormat: RootJsonFormat[model.Product] = jsonFormat3(model.Product.apply)
   implicit val system: ActorSystem = ActorSystem("inventory-system")
-
-  val routes: Route = pathPrefix("api" / "inventory") {
+  //todo
+  val routes: Route = pathPrefix("inventory") {
     path("/products/active") {
       Directives.get {
         onComplete(inventoryService.getActiveProducts()) {
